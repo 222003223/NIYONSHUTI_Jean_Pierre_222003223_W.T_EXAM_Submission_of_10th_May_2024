@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!---NIYONSHUTI Jean Pierre 222003223--->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD AR workshops</title>
+    <!----Add your CSS styles here --->
+      <link rel="stylesheet" href="css/style2.css">
+      <script type="text/javascript" src="javascript/insertjs.js"></script>
+</head>
+<body>
+<header style="font: Arial Rounded  MT Bold; font-size: 22;">
+    <div style="display: flex; align-items: center;">
+    <div>  <img src="./img/pierre.jpeg" width="100" height="75" alt="Logo">
+        <button class="back-button" onclick="window.location.href='admin_home.html'">Back</button>
+    </div></div>
+    <hr>
+<main style="color:grey;">
+    <center>
+ <section">
+         <h1> ADD NEW workshop</h1>
+    <form method="post" action="landingworkshop.php">
+        
+        <label for="title"> title:</label>
+        <input type="text" id=" title" name="title" required><br>
+        
+        <label for="text">description:</label>
+        <input type="text" id="description" name="description" required><br>
+
+
+        <label for="instructor_id">instructor_id:</label>
+        <input type="number" id="instructor_id" name="instructor_id" required><br>
+
+        <label for="start_date">start_date:</label>
+        <input type="date" id="start_date" name="start_date" required><br>
+
+         <label for="end_date">end_date:</label>
+        <input type="date" id="end_date" name="end_date" required><br>
+
+         <label for="location">location:</label>
+        <input type="text" id="location" name="location" required><br>
+
+         <label for="capacity">capacity:</label>
+        <input type="text" id="capacity" name="capacity" required><br>
+
+         <label for="TagID">TagID:</label>
+        <input type="number" id="TagID" name="TagID" required><br>
+
+        
+        <button type="submit" name="create">Create</button>
+    </form>
+    
+   </section></center></main>
+    <!-- User List -->
+    <h2>Update of data</h2>
+    <script type="text/javascript" src="javascript/updatejs.js"></script>
+    <script type="text/javascript" src="javascript/deletejs.js"></script>
+    <script type="text/javascript" src="javascript/readjs.js"></script>
+     <form method="post" action="landingworkshop.php">
+        <label for="workshop_id">workshop_id:</label><br>
+      <input type="number" name="workshop_id" id="workshop_id" required><br><br>
+      <label for="column">Select Data to Update:</label><br>
+      <select name="column" id="column" required>
+        <option value="workshop_id">workshop_id</option>
+        <option value="title">title</option>
+        <option value="description">description</option>
+        <option value="instructor_id">instructor_id</option>
+        <option value="start_date">start_date</option>
+        <option value="end_date">end_date</option>
+        <option value="location">location</option>
+        <option value="capacity">capacity</option>
+        <option value="TagID">TagID</option>
+        </select><br><br>
+      <label for="value">New Value:</label><br>
+      <input type="text" name="value" id="value" required><br><br>
+      <button type="submit">Update</button>
+                </form>
+</body>
+</html>
